@@ -1,25 +1,25 @@
 # 🚗 Smart Parking System
 
-An Arduino-based smart parking system.
+This project is an Arduino-based smart parking system designed to automate vehicle entry and efficiently manage parking space allocation. The system detects incoming vehicles, analyzes parking availability, and guides the driver to the nearest available spot.
 
 ## 🔧 Components Used
 
-* Arduino Uno
-* Ultrasonic sensor
-* 4 IR sensors
-* Servo motor
-* I2C LCD display
+* Arduino Uno – main microcontroller
+* Ultrasonic Sensor (HC-SR04) – vehicle detection at the entrance
+* 4 IR Sensors – parking space occupancy detection
+* Servo Motor – barrier gate control
+* 16x2 I2C LCD Display – user interface
 
 ## ⚙️ Working Principle
 
-* The vehicle is detected using an ultrasonic sensor
+* When a vehicle approaches the entrance, it is detected by the ultrasonic sensor
 * A "Welcome" message is displayed on the LCD screen
-* IR sensors monitor the parking spaces
-* Available parking spots are identified
-* The nearest available parking space is suggested
-* The servo motor opens the gate
-* After the vehicle enters, the gate closes
-* If the parking lot is full, entry is denied
+* The system reads data from IR sensors to determine which parking spots are occupied or available
+* Available parking spaces are listed on the LCD
+* The system selects and recommends the nearest available parking spot
+* The servo motor opens the gate to allow vehicle entry
+* After a short delay, the gate automatically closes
+* If all parking spots are occupied, the system displays a "Parking Full" message and keeps the gate closed
 
 ## 🅿️ Parking System
 
