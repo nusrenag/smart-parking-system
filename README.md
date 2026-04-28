@@ -364,6 +364,6 @@ void loop() {
 
   delay(300);
 }
-## 💻 Code for Arduino Uno (physical)
+
 ```
 
