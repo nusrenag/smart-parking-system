@@ -31,7 +31,7 @@ This project is an Arduino-based smart parking system designed to automate vehic
 ## 📷 Circuit Diagram
 <img width="1016" height="671" alt="Ekran görüntüsü 2026-04-27 214845" src="https://github.com/user-attachments/assets/8ae21a17-5e84-45c5-a8a6-0c2a69a5ce52" />
 
-## 💻 Code
+## 💻 Code for Circuit Diagram
 ```cpp
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
