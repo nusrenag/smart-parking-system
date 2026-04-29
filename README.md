@@ -54,6 +54,7 @@ The system works according to the following steps:
 
 ## 📷 Circuit Diagram for Proteus
 <img width="1016" height="671" alt="Ekran görüntüsü 2026-04-27 214845" src="https://github.com/user-attachments/assets/8ae21a17-5e84-45c5-a8a6-0c2a69a5ce52" />
+
 Additionally, if you'd like to run the project in Proteus, you can download and run the file named *New Projects.pdsprj* from my page.
 
 ## 💻 Code for Circuit Diagram (Proteus)
