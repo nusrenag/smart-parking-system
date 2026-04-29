@@ -235,6 +235,7 @@ The actual application was developed based on the results obtained and connectio
 ## 📸 Project Images
 <img width="1600" height="1200" alt="5848ee2b-5c28-4694-8cc2-993159596018" src="https://github.com/user-attachments/assets/82fde1dc-5b81-4aef-ada3-2a742f46337b" />
 
+
 <img width="1600" height="1200" alt="eac50e7c-2518-4d9d-ab35-90025ffc8355" src="https://github.com/user-attachments/assets/f752b793-abeb-4af7-b3b3-592828bc746b" />
 
 ## 💡 **Observations and Important Notes**
