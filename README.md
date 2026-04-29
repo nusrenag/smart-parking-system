@@ -10,8 +10,6 @@ The main objective of this project is to make parking lot use more practical and
 
 ## 🔧 Components Used
 
-🔧 **Hardware Used**
-
 All components used in the project have been carefully selected to ensure the system operates smoothly and intelligently:
 
 *Arduino Uno
