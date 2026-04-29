@@ -12,27 +12,27 @@ The main objective of this project is to make parking lot use more practical and
 
 All components used in the project have been carefully selected to ensure the system operates smoothly and intelligently:
 
-*Arduino Uno
+* Arduino Uno
 
 It is at the heart of the system. It receives and processes data from all sensors and controls other components accordingly.
 
-*Ultrasonic Sensor (HC-SR04)
+* Ultrasonic Sensor (HC-SR04)
 
 Used to determine if there is a vehicle at the parking lot entrance. It measures the distance by sending sound waves and detects the vehicle.
 
-*Infrared (IR) Sensors (4 units)
+* Infrared (IR) Sensors (4 units)
 
 Placed in each parking space. Thanks to these sensors, it instantly detects whether the parking spaces are occupied or empty.
 
-*Servo Motor (SG90)
+* Servo Motor (SG90)
 
 Controls the parking lot entrance gate. It opens the gate when a vehicle is detected and closes it again when the process is complete.
 
-*16x2 I2C LCD Screen
+* 16x2 I2C LCD Screen
 
 Used to provide information to the driver. Important information such as empty parking spaces and directions are displayed here.
 
-*Breadboard and Jumper Cables
+* Breadboard and Jumper Cables
 
 Used for circuit connections.
 
