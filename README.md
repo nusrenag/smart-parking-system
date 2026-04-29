@@ -1,37 +1,67 @@
 # 🚗 Smart Parking System
 
-This project is an Arduino-based smart parking system designed to automate vehicle entry and efficiently manage parking space allocation. The system detects incoming vehicles, analyzes parking availability, and guides the driver to the nearest available spot.
+🚗 **Smart Parking System**
+
+This project is a smart parking management solution developed using Arduino. The system automatically detects incoming vehicles, assesses the occupancy rate of parking spaces in the parking lot, and directs the driver to the most suitable available parking space.
+
+The rapid increase in the number of vehicles today makes finding a parking space increasingly difficult. Such smart solutions enable more efficient use of existing parking spaces.
+
+## 🎯 Project Objective
+
+The main objective of this project is to make parking lot use more practical and efficient. To this end, the system automates parking lot entry, allowing vehicles to enter quickly. It also monitors parking lot occupancy in real-time and shows drivers the nearest available parking space. This prevents unnecessary waiting, minimizes time loss, and makes the parking process much more convenient.
 
 ## 🔧 Components Used
 
-* Arduino Uno – main microcontroller
-* Ultrasonic Sensor (HC-SR04) – vehicle detection at the entrance
-* 4 IR Sensors – parking space occupancy detection
-* Servo Motor – barrier gate control
-* 16x2 I2C LCD Display – user interface
+🔧 **Hardware Used**
 
-## ⚙️ Working Principle
+All components used in the project have been carefully selected to ensure the system operates smoothly and intelligently:
 
-* When a vehicle approaches the entrance, it is detected by the ultrasonic sensor
-* A "Welcome" message is displayed on the LCD screen
-* The system reads data from IR sensors to determine which parking spots are occupied or available
-* Available parking spaces are listed on the LCD
-* The system selects and recommends the nearest available parking spot
-* The servo motor opens the gate to allow vehicle entry
-* After a short delay, the gate automatically closes
-* If all parking spots are occupied, the system displays a "Parking Full" message and keeps the gate closed
+*Arduino Uno
 
-## 🅿️ Parking System
+It is at the heart of the system. It receives and processes data from all sensors and controls other components accordingly.
 
-* IR1 → Parking Spot 1
-* IR2 → Parking Spot 2
-* IR3 → Parking Spot 3
-* IR4 → Parking Spot 4
+*Ultrasonic Sensor (HC-SR04)
 
-## 📷 Circuit Diagram
+Used to determine if there is a vehicle at the parking lot entrance. It measures the distance by sending sound waves and detects the vehicle.
+
+*Infrared (IR) Sensors (4 units)
+
+Placed in each parking space. Thanks to these sensors, it instantly detects whether the parking spaces are occupied or empty.
+
+*Servo Motor (SG90)
+
+Controls the parking lot entrance gate. It opens the gate when a vehicle is detected and closes it again when the process is complete.
+
+*16x2 I2C LCD Screen
+
+Used to provide information to the driver. Important information such as empty parking spaces and directions are displayed here.
+
+*Breadboard and Jumper Cables
+
+Used for circuit connections.
+
+## ⚙️ How Does the System Work?
+
+The system works according to the following steps:
+
+1. When the vehicle approaches the entrance, it is detected by the ultrasonic sensor.
+2. A welcome message is displayed to the driver on the LCD screen.
+3. The system analyzes the status of parking spaces by receiving data from the IR sensors.
+4. Empty parking spaces are listed on the LCD screen.
+5. The system determines the nearest empty parking space.
+6. The driver is shown which parking space to go to.
+7. The servo motor starts and opens the entrance gate.
+8. The gate closes automatically after the vehicle enters.
+9. If all parking spaces are full, the system does not allow entry.
+
+
+
+## 📷 Circuit Diagram for Proteus
 <img width="1016" height="671" alt="Ekran görüntüsü 2026-04-27 214845" src="https://github.com/user-attachments/assets/8ae21a17-5e84-45c5-a8a6-0c2a69a5ce52" />
+Additionally, if you'd like to run the project in Proteus, you can download and run the file named *New Projects.pdsprj* from my page.
 
-## 💻 Code for Circuit Diagram
+## 💻 Code for Circuit Diagram (Proteus)
+After downloading the circuit diagram in Proteus, the code used is given below. You can also use it by downloading the *sketch_apr24a.ino* and *sketch_apr24a.ino.hex* files from my page.
 ```cpp
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
@@ -198,6 +228,7 @@ void loop() {
   delay(300);
 }
  ```
+
 ## 💻 Code for Arduino Uno (physical)
 ```cpp
 #include <Wire.h>
