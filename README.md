@@ -245,9 +245,11 @@ The actual application was developed based on the results obtained and connectio
 
 * A significant difference was also observed regarding the I2C LCD address. While the 0x20 address was used for the LCD in the simulation, this address did not work in the Arduino. As a result of the tests, it was determined that the LCD worked correctly with the 0x27 address.
 
-* The detection status of IR sensors can be changed using the sensitivity potentiometer on the sensor. Therefore, each sensor must be calibrated individually to detect whether parking spaces are occupied or empty. * In the actual system, it is critical that all modules share a common GND line. If the Arduino, LCD, servo motor, ultrasonic sensor, and IR sensors are not connected to the same ground line, the system may operate unstably.
+* The detection status of IR sensors can be changed using the sensitivity potentiometer on the sensor. Therefore, each sensor must be calibrated individually to detect whether parking spaces are occupied or empty.
 
-** Because the mechanical placement of the servo motor can behave differently in the real system than in the simulation, the door angles were determined by testing on the physical setup. The `gateClosed` value was set to `20` for the door to remain parallel to the surface in the closed position, and the `gateOpen` value was set to `110` for the door to open sufficiently. Therefore, instead of the standard `0` and `90`, the servo angles used in the code were `20` and `110` to match the mechanical position in the real system.
+* In the actual system, it is critical that all modules share a common GND line. If the Arduino, LCD, servo motor, ultrasonic sensor, and IR sensors are not connected to the same ground line, the system may operate unstably.
+
+* Because the mechanical placement of the servo motor can behave differently in the real system than in the simulation, the door angles were determined by testing on the physical setup. The `gateClosed` value was set to `20` for the door to remain parallel to the surface in the closed position, and the `gateOpen` value was set to `110` for the door to open sufficiently. Therefore, instead of the standard `0` and `90`, the servo angles used in the code were `20` and `110` to match the mechanical position in the real system.
 
 ## 💻 Code for Real System 
 ```cpp
