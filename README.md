@@ -1,7 +1,5 @@
 # 🚗 Smart Parking System
 
-🚗 **Smart Parking System**
-
 This project is a smart parking management solution developed using Arduino. The system automatically detects incoming vehicles, assesses the occupancy rate of parking spaces in the parking lot, and directs the driver to the most suitable available parking space.
 
 The rapid increase in the number of vehicles today makes finding a parking space increasingly difficult. Such smart solutions enable more efficient use of existing parking spaces.
