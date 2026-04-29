@@ -224,8 +224,31 @@ void loop() {
   delay(300);
 }
  ```
+## 🔬 Real System Application
+This project was first designed and tested in the Proteus simulation environment. The circuit connections, sensor responses, and control algorithm were examined in detail in the virtual environment to ensure the system was functioning correctly.
 
-## 💻 Code for Arduino Uno (physical)
+After the simulation phase was completed, the same structure was transferred to the physical environment using real hardware components. The system was built using an Arduino Uno, ultrasonic sensor, IR sensors, servo motor, and I2C LCD.
+
+The actual application was developed based on the results obtained and connections established in the simulation. This ensured compatibility between the simulation and the physical system, resulting in the project's reliable operation.
+
+## 📸 Project Images
+<img width="1600" height="1200" alt="5848ee2b-5c28-4694-8cc2-993159596018" src="https://github.com/user-attachments/assets/82fde1dc-5b81-4aef-ada3-2a742f46337b" />
+
+<img width="1600" height="1200" alt="eac50e7c-2518-4d9d-ab35-90025ffc8355" src="https://github.com/user-attachments/assets/f752b793-abeb-4af7-b3b3-592828bc746b" />
+
+## 💡 **Observations and Important Notes**
+
+* The simulation and the real system worked together to a large extent. The circuit structure established in the Proteus environment was implemented seamlessly in the physical hardware with the same logic.
+
+* Some `delay()` times used in the simulation needed to be readjusted in the real system. This is because the components operate under ideal conditions in Proteus. In real life, however, sensor response time, servo motor movement speed, connection quality, power fluctuations, and environmental factors can directly affect the system. Therefore, delay times were increased to achieve more stable and fluid operation.
+
+* A significant difference was also observed regarding the I2C LCD address. While the 0x20 address was used for the LCD in the simulation, this address did not work in the Arduino. As a result of the tests, it was determined that the LCD worked correctly with the 0x27 address.
+
+* The detection status of IR sensors can be changed using the sensitivity potentiometer on the sensor. Therefore, each sensor must be calibrated individually to detect whether parking spaces are occupied or empty. * In the actual system, it is critical that all modules share a common GND line. If the Arduino, LCD, servo motor, ultrasonic sensor, and IR sensors are not connected to the same ground line, the system may operate unstably.
+
+** Because the mechanical placement of the servo motor can behave differently in the real system than in the simulation, the door angles were determined by testing on the physical setup. The `gateClosed` value was set to `20` for the door to remain parallel to the surface in the closed position, and the `gateOpen` value was set to `110` for the door to open sufficiently. Therefore, instead of the standard `0` and `90`, the servo angles used in the code were `20` and `110` to match the mechanical position in the real system.
+
+## 💻 Code for Real System 
 ```cpp
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
@@ -393,4 +416,6 @@ void loop() {
 }
 
 ```
+## 📌 Note
 
+This project has been successfully developed for educational purposes and aims to help understand the fundamental logic of real-world systems.
