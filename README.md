@@ -254,6 +254,9 @@ The actual application was developed based on the results obtained and connectio
 * Because the mechanical placement of the servo motor can behave differently in the real system than in the simulation, the door angles were determined by testing on the physical setup. The `gateClosed` value was set to `20` for the door to remain parallel to the surface in the closed position, and the `gateOpen` value was set to `110` for the door to open sufficiently. Therefore, instead of the standard `0` and `90`, the servo angles used in the code were `20` and `110` to match the mechanical position in the real system.
 
 ## 💻 Code for Real System 
+
+You can download the *codeforarduino.ino* file from this repository and upload it to your Arduino board using the Arduino IDE to run the system physically.
+
 ```cpp
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
