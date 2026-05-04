@@ -427,3 +427,7 @@ void loop() {
 ## 📌 Note
 
 This project has been successfully developed for educational purposes and aims to help understand the fundamental logic of real-world systems.
+
+## 📘 More Information
+
+For more detailed information about the system, you can review the *EEE308-termproject.pdf* report.
